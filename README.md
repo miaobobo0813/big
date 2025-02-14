@@ -72,3 +72,24 @@ cin >> b;
 cout << a.eqint(b);
 ```
 In this example, if `a == b`, the output will be `1`. Otherwise, the output will be `0`.
+
+#### Compare a variable of type `big`.
+```Cpp
+big a, b;
+a.intw(50);
+int tmp;
+cin >> tmp;
+b.intw(tmp);
+cout << a.combig(b);
+```
+In this example, if `a >= b`, the output will be `1`. Otherwise, the output will be `0`.
+
+```Cpp
+big a, b;
+a.intw(50);
+int tmp;
+cin >> tmp;
+b.intw(tmp);
+cout << a.eqbig(b);
+```
+In this example, if `a == b`, the output will be `1`. Otherwise, the output will be `0`.
