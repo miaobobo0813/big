@@ -2,7 +2,7 @@
 
 Version 2.0
 
-## Start using
+## Get started
 
 1. To download the library, please use the following command:
 ```Bash
@@ -17,19 +17,20 @@ git clone https://github.com/miaobobo0813/big.git
    #include <big.h>
    ```
 
-## Use the library
+## Start using the library
 
-#### 1. Create a high-precision type (`big`) variables.
+#### Create a high-precision type (`big`) variables.
 ```Cpp
-big a, b;
-big c(200);
+big a, c;
+big b(200);
 ```
-This code creates three big type variables named `a`, `b`, and `c`, and sets the number of digits for `c` to 200. 
+This code creates three big type variables named `a`, `b`, and `c`, and sets the number of digits for `b` to 200. 
 
 Note: The type supports up to 5000 digits.
 
-#### 2. Write a value to a variable of type `big`.
+#### Write a value to a variable of type `big`.
 ```Cpp
+big a, b;
 a.intw(50);
 b.stringw("10");
 ```
@@ -40,3 +41,34 @@ Note:
   - The function `intw()` only writes `int` value.
 
   - The function `stringw()` only writes `string` value.
+
+#### Print a variable of type `big`.
+```Cpp
+big a;
+a.intw(50);
+a.print();
+```
+This code prints the variable `a`.
+
+## Operations
+
+### Comparison operations.
+
+#### Compare a variable of type `int`.
+```Cpp
+big a;
+a.intw(50);
+int b;
+cin >> b;
+cout << a.comint(b);
+```
+In this example, if `a >= b`, the output will be `1`. Otherwise, the output will be `0`.
+
+```Cpp
+big a;
+a.intw(50);
+int b;
+cin >> b;
+cout << a.eqint(b);
+```
+In this example, if `a == b`, the output will be `1`. Otherwise, the output will be `0`.
