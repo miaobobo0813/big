@@ -2,4 +2,12 @@
 
 Version 2.0
 
-## There are these functions in the 'big' library.
+## Start using
+
+1. Download the library. Use the following code.
+```
+git clone https://github.com/miaobobo0813/big.git
+```
+3. 
+
+## Functions in the library
