@@ -93,3 +93,50 @@ b.intw(tmp);
 cout << a.eqbig(b);
 ```
 In this example, if `a == b`, the output will be `1`. Otherwise, the output will be `0`.
+
+#### Note: Comparison operations return a value of type `bool`.
+
+### Arithmetic operations.
+
+#### Add another variable of type `big`.
+```Cpp
+big a, b, c;
+int t1, t2;
+cin >> t1 >> t2;
+a.intw(t1);
+b.intw(t2);
+c = a.plusbig(b);
+c.print();
+```
+In this example, the program will output result of `t1 + t2`, namely the value of `a+b`.
+
+Note: `plusbig()` returns a value of type `big`.
+
+#### Subtract another variable of type `big`.
+```Cpp
+big a, b, c;
+int t1, t2;
+cin >> t1 >> t2;
+a.intw(t1);
+b.intw(t2);
+c = a.subbig(b);
+c.print();
+```
+In this example, the program will output result of `t1 - t2`, namely the value of `a-b`.
+
+Note: 
+  - `subbig()` returns a value of type `big`.
+  - If the result is negative, throw an exception: "The answer is a negative number."
+
+#### Multiply by another variable of type `int`.
+```Cpp
+big a, c;
+int t1, b;
+cin >> t1 >> b;
+a.intw(t1);
+c = a.mulint(b);
+c.print();
+```
+In this example, the program will output the product of `t1 * b`, namely the value of `a*b`.
+
+Note: `mulint()` returns a value of type `big`.
