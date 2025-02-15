@@ -39,7 +39,6 @@ This code overwrites `a` with the value `50` and `b` with the value `10`.
 Note: 
 
   - The function `intw()` only writes `int` value.
-
   - The function `stringw()` only writes `string` value.
 
 #### Print a variable of type `big`.
@@ -108,7 +107,7 @@ b.intw(t2);
 c = a.plusbig(b);
 c.print();
 ```
-In this example, the program will output result of `t1 + t2`, namely the value of `a+b`.
+In this example, the program will output the sum of `t1 + t2`, namely the value of `a+b`.
 
 Note: `plusbig()` returns a value of type `big`.
 
@@ -122,11 +121,11 @@ b.intw(t2);
 c = a.subbig(b);
 c.print();
 ```
-In this example, the program will output result of `t1 - t2`, namely the value of `a-b`.
+In this example, the program will output the difference of `t1 - t2`, namely the value of `a-b`.
 
 Note: 
   - `subbig()` returns a value of type `big`.
-  - If the result is negative, throw an exception: "The answer is a negative number."
+  - If the difference is negative, throw an exception: "The answer is a negative number."
 
 #### Multiply by another variable of type `int`.
 ```Cpp
@@ -140,3 +139,32 @@ c.print();
 In this example, the program will output the product of `t1 * b`, namely the value of `a*b`.
 
 Note: `mulint()` returns a value of type `big`.
+
+#### Divide by another variable of type `int`.
+```Cpp
+big a, c;
+int t1, b;
+cin >> t1 >> b;
+a.intw(t1);
+c = a.diviint(b);
+c.print();
+```
+In this example, the program will output the quotient of `t1 / b`, namely the value of `a/b`.
+
+Note: 
+  - `diviint()` returns a value of type `big`.
+  - If the quotient is a decimal, it will automatically be rounded down.
+
+#### Modulo another variable of type `int`.
+```Cpp
+big a, c;
+int t1, b;
+cin >> t1 >> b;
+a.intw(t1);
+c = a.remint(b);
+c.print();
+```
+In this example, the program will output the remainder of `t1 % b`, namely the value of `a%b`.
+
+Note: `remint()` returns a value of type `big`.
+
